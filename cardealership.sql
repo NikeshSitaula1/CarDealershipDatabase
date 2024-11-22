@@ -29,9 +29,8 @@ CREATE TABLE vehicles (
     price DOUBLE
 );
     
-
 CREATE TABLE sales_contracts (
-    contract_id INT AUTO_INCREMENT PRIMARY KEY,
+    sales_id INT AUTO_INCREMENT PRIMARY KEY,
     vin INT NOT NULL,
     date VARCHAR(40) NOT NULL,
     customer_name VARCHAR(50) NOT NULL,
@@ -48,7 +47,7 @@ CREATE TABLE sales_contracts (
 
 
 CREATE TABLE lease_contracts (
-    contract_id INT AUTO_INCREMENT PRIMARY KEY,
+    lease_id INT AUTO_INCREMENT PRIMARY KEY,
     vin INT NOT NULL,
     date VARCHAR(40) NOT NULL,
     customer_name VARCHAR(50) NOT NULL,
@@ -60,6 +59,7 @@ CREATE TABLE lease_contracts (
     FOREIGN KEY (vin)
         REFERENCES vehicles (vin)
 );
+
 
 INSERT INTO vehicles (VIN, Year, Make, Model, vehicletype, Color, Odometer, Price) VALUES
 (10112, '1993', 'Ford', 'Explorer', 'SUV', 'Red', 525123, 995.0),
