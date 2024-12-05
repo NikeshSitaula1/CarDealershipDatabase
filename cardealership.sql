@@ -60,7 +60,6 @@ CREATE TABLE lease_contracts (
         REFERENCES vehicles (vin)
 );
 
-
 INSERT INTO vehicles (VIN, Year, Make, Model, vehicletype, Color, Odometer, Price) VALUES
 (10112, '1993', 'Ford', 'Explorer', 'SUV', 'Red', 525123, 995.0),
 (37846, '2001', 'Ford', 'Ranger', 'Truck', 'Yellow', 172544, 1995.0),
@@ -103,6 +102,41 @@ VALUES
 (31123, '2024-11-17', 'Charlie Chaplin', 'charliechaplin@example.com', 18000.00, 1500.00, 38000.00, 770.00),
 (45023, '2024-11-18', 'Diana Prince', 'dianaprince@example.com', 12000.00, 1300.00, 31000.00, 640.00),
 (71234, '2024-11-19', 'Ethan Hunt', 'ethanhunt@example.com', 20000.00, 1800.00, 44000.00, 900.00);
+
+
+INSERT INTO dealership (name, address, phone)
+VALUES ('D & B Used Cars', '111 Old Benbrook Rd', '817-555-5555');
+
+INSERT INTO dealership (name, address, phone)
+VALUES
+		('Elite Auto Sales', '2233 Maple Ave', '214-555-1234'),
+		('Premier Motors', '987 Westwood Blvd', '972-555-9876');
+        
+INSERT INTO inventory (dealership_id, vin) VALUES
+(1, 10112),
+(1, 37846),
+(1, 20498),
+(2, 35812),
+(2, 50013),
+(2, 10025),
+(3, 40130),
+(3, 11205),
+(3, 21123),
+(1, 30211),
+(1, 40235),
+(2, 10234),
+(2, 20812),
+(3, 30987),
+(3, 50432),
+(1, 21234),
+(1, 31123),
+(2, 45023),
+(3, 60123),
+(3, 71234);
+      
+
+
+
 
 
 
